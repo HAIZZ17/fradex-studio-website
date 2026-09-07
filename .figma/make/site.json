@@ -1,0 +1,10 @@
+{
+  "description": "Showcases professional video editing services for YouTube commentary shorts with clear packages, portfolio, and easy client contact via Discord.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

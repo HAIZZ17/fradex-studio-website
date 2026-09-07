@@ -1,0 +1,27 @@
+<svg width="540" height="960" viewBox="0 0 540 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="540" height="960" fill="#0F1221"/>
+  <rect x="34" y="34" width="472" height="892" rx="28" fill="url(#bg)" stroke="#2A2745" stroke-width="2"/>
+  <circle cx="160" cy="250" r="104" fill="#CAFF00" fill-opacity="0.14"/>
+  <circle cx="386" cy="330" r="132" fill="#00D4FF" fill-opacity="0.12"/>
+  <circle cx="270" cy="630" r="160" fill="#FF5C47" fill-opacity="0.12"/>
+  <rect x="72" y="80" width="166" height="42" rx="12" fill="#CAFF00"/>
+  <path d="M104 95L126 107L104 119V95Z" fill="#0D0B1F"/>
+  <text x="140" y="108" fill="#0D0B1F" font-family="Arial, sans-serif" font-size="18" font-weight="800" dominant-baseline="middle">CUTFRAME</text>
+  <rect x="333" y="80" width="135" height="42" rx="12" fill="#1D2A18"/>
+  <circle cx="360" cy="101" r="6" fill="#CAFF00"/>
+  <text x="376" y="108" fill="#CAFF00" font-family="Arial, sans-serif" font-size="18" font-weight="800" dominant-baseline="middle">SAMPLE</text>
+  <rect x="95" y="360" width="350" height="132" rx="18" fill="#0D0B1F" fill-opacity="0.8" stroke="#CAFF00" stroke-opacity="0.45"/>
+  <text x="270" y="414" text-anchor="middle" fill="#F0EEF8" font-family="Arial, sans-serif" font-size="32" font-weight="900">SHORT SAMPLE</text>
+  <text x="270" y="454" text-anchor="middle" fill="#CAFF00" font-family="Arial, sans-serif" font-size="20" font-weight="800">VIDEO PLACEHOLDER</text>
+  <circle cx="270" cy="600" r="62" fill="#CAFF00"/>
+  <path d="M252 565L306 600L252 635V565Z" fill="#0D0B1F"/>
+  <rect x="92" y="780" width="356" height="58" rx="14" fill="#0D0B1F" fill-opacity="0.72" stroke="#2A2745"/>
+  <text x="270" y="815" text-anchor="middle" fill="#A8A4BD" font-family="Arial, sans-serif" font-size="18" font-weight="700">Replace with your vertical short later</text>
+  <defs>
+    <linearGradient id="bg" x1="34" y1="34" x2="506" y2="926" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18112D"/>
+      <stop offset="0.45" stop-color="#0B1A1E"/>
+      <stop offset="1" stop-color="#1A0A14"/>
+    </linearGradient>
+  </defs>
+</svg>

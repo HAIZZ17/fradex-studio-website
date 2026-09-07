@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-lime: var(--lime);
+  --color-cyan: var(--cyan);
+  --color-coral: var(--coral);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --background: #0D0B1F;
+  --foreground: #F0EEF8;
+  --card: #13112A;
+  --card-foreground: #F0EEF8;
+  --primary: #CAFF00;
+  --primary-foreground: #0D0B1F;
+  --secondary: #1A1830;
+  --secondary-foreground: #F0EEF8;
+  --muted: #16142C;
+  --muted-foreground: #7A778F;
+  --accent: #00D4FF;
+  --accent-foreground: #0D0B1F;
+  --border: #2A2745;
+  --ring: #CAFF00;
+  --lime: #CAFF00;
+  --cyan: #00D4FF;
+  --coral: #FF5C47;
+  --purple: #9B6DFF;
+  --radius: 0.5rem;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*:hover::-webkit-scrollbar,
+*:focus::-webkit-scrollbar {
+  display: none;
+}
+
+.review-marquee {
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.review-marquee-track {
+  width: max-content;
+  animation: review-marquee 38s linear infinite;
+}
+
+.review-marquee:hover .review-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes review-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
