@@ -116,7 +116,7 @@ export default function Home() {
           </div>
 
           {/* Vertical short sample */}
-          <div className="md:mr-8" style={{ width: 250 }}>
+          <div className="md:mr-15" style={{ width: 250 }}>
             <div className="relative rounded-2xl overflow-hidden border group" style={{ aspectRatio: "9/16", background: "var(--card)", borderColor: "var(--border)", boxShadow: "0 0 44px rgba(155,109,255,0.18)" }}>
               {isSamplePlaying ? (
                 <video
