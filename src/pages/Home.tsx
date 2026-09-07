@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router";
 import { discordMessageUrl } from "../contactConfig";
 
 const homeSampleVideo = "https://vjnxorjlyokpexhethrm.supabase.co/storage/v1/object/public/portfolio-media/0907.mp4";
+const homeSampleThumbnail = "https://vjnxorjlyokpexhethrm.supabase.co/storage/v1/object/public/portfolio-media/mcd%20thumbnails.png";
 
 const stats = [
   { val: "80+ %", label: "Avg retention rate", color: "var(--lime)", bar: 80 },
@@ -61,6 +63,8 @@ const reviews = [
 ];
 
 export default function Home() {
+  const [isSamplePlaying, setIsSamplePlaying] = useState(false);
+
   return (
     <div>
       {/* Hero */}
@@ -114,18 +118,28 @@ export default function Home() {
           {/* Vertical short sample */}
           <div style={{ width: 250 }}>
             <div className="relative rounded-2xl overflow-hidden border group" style={{ aspectRatio: "9/16", background: "var(--card)", borderColor: "var(--border)", boxShadow: "0 0 44px rgba(155,109,255,0.18)" }}>
-              <video
-                src={homeSampleVideo}
-                className="block w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-              />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: "rgba(13,11,31,0.35)" }}>
-                <div className="w-14 h-14 rounded-full flex items-center justify-center text-xl" style={{ background: "var(--lime)", color: "#000", boxShadow: "0 0 24px rgba(202,255,0,0.35)" }}>▶</div>
-              </div>
+              {isSamplePlaying ? (
+                <video
+                  src={homeSampleVideo}
+                  className="block w-full h-full object-cover"
+                  autoPlay
+                  controls
+                  playsInline
+                  preload="auto"
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setIsSamplePlaying(true)}
+                  className="absolute inset-0 block w-full h-full group/sample"
+                  aria-label="Play sample short"
+                >
+                  <img src={homeSampleThumbnail} alt="Sample short thumbnail" className="block w-full h-full object-cover" />
+                  <span className="absolute inset-0 flex items-center justify-center transition-colors group-hover/sample:bg-black/25">
+                    <span className="w-14 h-14 rounded-full flex items-center justify-center text-xl transition-transform group-hover/sample:scale-105" style={{ background: "var(--lime)", color: "#000", boxShadow: "0 0 24px rgba(202,255,0,0.35)" }}>▶</span>
+                  </span>
+                </button>
+              )}
             </div>
             <p className="text-center mt-3 text-xs font-semibold" style={{ color: "var(--muted-foreground)" }}>Sample short preview</p>
             
