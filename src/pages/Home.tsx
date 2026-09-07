@@ -121,7 +121,7 @@ export default function Home() {
               {isSamplePlaying ? (
                 <video
                   src={homeSampleVideo}
-                  className="block w-full h-full object-cover"
+                  className="block w-full h-full object-contain bg-black"
                   autoPlay
                   controls
                   playsInline

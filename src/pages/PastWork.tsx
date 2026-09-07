@@ -158,7 +158,7 @@ function VideoPlaceholder({ project, fullscreen = false }: { project: Project; f
     >
       <video
         src={videoSource}
-        className="block w-full h-full object-cover"
+        className="block w-full h-full object-contain bg-black"
         controls
         autoPlay
         playsInline
