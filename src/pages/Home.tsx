@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 import { discordMessageUrl } from "../contactConfig";
 
+const homeSampleVideo = "https://vjnxorjlyokpexhethrm.supabase.co/storage/v1/object/public/portfolio-media/0907.mp4";
+
 const stats = [
   { val: "80+ %", label: "Avg retention rate", color: "var(--lime)", bar: 80 },
   { val: "48hr", label: "Standard delivery", color: "var(--cyan)", bar: 90 },
@@ -109,10 +111,18 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Vertical short sample placeholder */}
+          {/* Vertical short sample */}
           <div style={{ width: 250 }}>
             <div className="relative rounded-2xl overflow-hidden border group" style={{ aspectRatio: "9/16", background: "var(--card)", borderColor: "var(--border)", boxShadow: "0 0 44px rgba(155,109,255,0.18)" }}>
-              <img src="/samples/short-sample-placeholder.svg" alt="Vertical short sample placeholder" className="block w-full h-full object-cover" />
+              <video
+                src={homeSampleVideo}
+                className="block w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: "rgba(13,11,31,0.35)" }}>
                 <div className="w-14 h-14 rounded-full flex items-center justify-center text-xl" style={{ background: "var(--lime)", color: "#000", boxShadow: "0 0 24px rgba(202,255,0,0.35)" }}>▶</div>
               </div>
