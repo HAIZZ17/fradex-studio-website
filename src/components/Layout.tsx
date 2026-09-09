@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Outlet, NavLink } from "react-router";
+import { useEffect, useState } from "react";
+import { Outlet, NavLink, useLocation } from "react-router";
 import { discordMessageUrl } from "../contactConfig";
 
 const navLinks = [
@@ -22,6 +22,11 @@ function BrandLogo({ size = "header" }: { size?: "header" | "footer" }) {
 
 export default function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [pathname]);
 
   return (
     <div className="min-h-full flex flex-col" style={{ background: "var(--background)", color: "var(--foreground)" }}>
@@ -31,7 +36,7 @@ export default function Layout() {
             <BrandLogo />
             <div className="flex flex-col leading-none">
               <span className="font-black text-sm tracking-tight" style={{ fontFamily: "Manrope, sans-serif" }}>FRADEX</span>
-              <span className="text-[9px] font-bold tracking-[0.15em]" style={{ color: "var(--purple)" }}>STUDIO · LVL 12</span>
+              <span className="text-[9px] font-bold tracking-[0.15em]" style={{ color: "var(--purple)" }}>STUDIO · POST</span>
             </div>
           </NavLink>
 
@@ -112,7 +117,6 @@ export default function Layout() {
           <div className="flex items-center gap-2">
             <BrandLogo size="footer" />
             <span className="font-black text-sm" style={{ fontFamily: "Manrope, sans-serif" }}>FRADEX STUDIO</span>
-            <span className="text-xs font-bold px-2 py-0.5 rounded" style={{ background: "rgba(155,109,255,0.18)", color: "var(--purple)" }}>LVL 12</span>
           </div>
           <p className="text-xs" style={{ color: "var(--muted-foreground)" }}>© 2026 FRADEX Studio · Commentary shorts studio</p>
           <div className="flex items-center gap-4">

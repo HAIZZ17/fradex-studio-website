@@ -8,7 +8,7 @@ const principles = [
 ];
 
 const bestFor = [
-  { label: "Creators who value premium editing", detail: "looking for advanced visuals, dynamic effects, and polished storytelling" },
+  { label: "Creators chasing 100K", detail: "helping new creators grow faster - reach 100K subscribers." },
   { label: "Commentary creators", detail: "who want Shorts that grab attention from the first second" },
   { label: "Growing channels", detail: "looking to improve retention, pacing, and viewer engagement" },
   { label: "Story-driven commentary", detail: "that needs strong visuals, captions, and seamless pacing" },
@@ -54,7 +54,7 @@ export default function About() {
       <section className="max-w-6xl mx-auto px-5 pt-10 pb-2">
         <div className="flex items-center gap-2">
           <span className="text-xs font-bold px-2 py-0.5 rounded" style={{ background: "rgba(155,109,255,0.15)", color: "var(--purple)" }}>About Us</span>
-          <span className="text-xs" style={{ color: "var(--muted-foreground)" }}>LVL 12 SHORTS EDITOR</span>
+          <span className="text-xs" style={{ color: "var(--muted-foreground)" }}>Shorts Editing Studio</span>
         </div>
         </section>
 
@@ -70,7 +70,7 @@ export default function About() {
               </span>
               <div>
                 <p className="font-black text-lg md:text-xl leading-none" style={{ fontFamily: "Manrope, sans-serif" }}>FRADEX Studio</p>
-                <p className="text-xs md:text-sm mt-1 font-bold" style={{ color: "var(--purple)" }}>LEVEL 12 · COMMENTARY SHORTS EDITOR</p>
+                <p className="text-xs md:text-sm mt-1 font-bold" style={{ color: "var(--purple)" }}>COMMENTARY SHORTS EDITING STUDIO</p>
               </div>
             </div>
             

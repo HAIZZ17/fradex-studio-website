@@ -302,7 +302,7 @@ export default function Services() {
                 color: 'var(--purple)',
               }}
             >
-              QUEST LINE
+              Workflow
             </span>
           </div>
           <h2
@@ -382,7 +382,7 @@ export default function Services() {
             className="relative inline-block text-xs font-black px-2 py-0.5 rounded mb-3"
             style={{ background: 'rgba(202,255,0,0.12)', color: 'var(--lime)' }}
           >
-            NEW QUEST AVAILABLE
+            Get Started
           </span>
           <h3
             className="relative text-2xl font-black mb-3"

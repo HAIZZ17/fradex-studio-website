@@ -2,60 +2,54 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { discordMessageUrl } from "../contactConfig";
 
-const homeSampleVideo = "https://vjnxorjlyokpexhethrm.supabase.co/storage/v1/object/public/portfolio-media/0907.mp4";
-const homeSampleThumbnail = "https://vjnxorjlyokpexhethrm.supabase.co/storage/v1/object/public/portfolio-media/mcd%20thumbnails.png";
+const homeSampleVideo = "https://vjnxorjlyokpexhethrm.supabase.co/storage/v1/object/public/portfolio-media/Snow.mp4";
+const homeSampleThumbnail = "https://vjnxorjlyokpexhethrm.supabase.co/storage/v1/object/public/portfolio-media/Snow%20thumbnails.png";
 
 const stats = [
-  { val: "80+ %", label: "Avg retention rate", color: "var(--lime)", bar: 80 },
-  { val: "48hr", label: "Standard delivery", color: "var(--cyan)", bar: 90 },
-  { val: "3–5×", label: "Rewatch multiplier", color: "var(--coral)", bar: 78 },
+  { val: "90 + %", label: "Avg retention rate", color: "var(--lime)"},
+  { val: "48 hr", label: "Standard delivery", color: "var(--cyan)"},
+  { val: "2–3×", label: "Rewatch multiplier", color: "var(--coral)"},
 ];
 
 const achievements = [
   { icon: "🎯", label: "Hook Master", desc: "100+ first-3s hooks crafted", color: "var(--lime)" },
   { icon: "⚡", label: "Speed Editor", desc: "48hr guaranteed delivery", color: "var(--cyan)" },
-  { icon: "🔥", label: "Retention King", desc: "Avg 80%+ on all shorts", color: "var(--coral)" },
+  { icon: "🔥", label: "Retention King", desc: "100%+ Retention on Multiple Shorts", color: "var(--coral)" },
 ];
 
 const reviews = [
   {
     name: "Aiden",
-    role: "Commentary Creator",
     quote: "The pacing felt so much cleaner. The hook landed faster, the captions matched my style, and the short was ready to post without overthinking it.",
     initial: "A",
     accent: "var(--lime)",
   },
   {
     name: "Marcus",
-    role: "Commentary Creator",
     quote: "My raw commentary clip was messy, but the final edit made the main point obvious in the first few seconds. The zooms and cuts hit exactly where they should.",
     initial: "M",
     accent: "var(--cyan)",
   },
   {
     name: "Chris",
-    role: "Commentary Shorts",
     quote: "I sent a raw clip and got back a shorts that actually had structure. It kept the strongest point, removed the drag, and felt natural.",
     initial: "C",
     accent: "var(--coral)",
   },
   {
     name: "Ryan",
-    role: "Commentary Channel",
     quote: "The edit kept the audience focused on the story instead of the cuts. Fast turnaround, clean subtitles, and the final video matched the reference perfectly.",
     initial: "R",
     accent: "var(--purple)",
   },
   {
     name: "Daniel",
-    role: "YouTube Commentator",
     quote: "The first three seconds felt much stronger after the edit. It cut straight into the point, and the final short felt sharper without losing my voice.",
     initial: "D",
     accent: "var(--lime)",
   },
   {
     name: "Ethan",
-    role: "Commentary Shorts",
     quote: "The subtitles, zooms, and pacing made the idea easier to follow. It looked clean, moved fast, and still felt like my usual style.",
     initial: "E",
     accent: "var(--cyan)",
@@ -116,7 +110,7 @@ export default function Home() {
           </div>
 
           {/* Vertical short sample */}
-          <div className="md:mr-15" style={{ width: 250 }}>
+          <div className="md:mr-8" style={{ width: 250 }}>
             <div className="relative rounded-2xl overflow-hidden border group" style={{ aspectRatio: "9/16", background: "var(--card)", borderColor: "var(--border)", boxShadow: "0 0 44px rgba(155,109,255,0.18)" }}>
               {isSamplePlaying ? (
                 <video
@@ -150,15 +144,15 @@ export default function Home() {
       {/* XP Stats row */}
       <section className="border-y" style={{ borderColor: "var(--border)" }}>
         <div className="max-w-6xl mx-auto px-5 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x" style={{ "--tw-divide-opacity": 1 } as any}>
-          {stats.map(({ val, label, color, bar }) => (
+          {stats.map(({ val, label, color}) => (
             <div key={val} className="px-6 first:pl-0 last:pr-0" style={{ borderColor: "var(--border)" }}>
               <div className="flex items-end justify-between mb-2">
                 <p className="text-3xl font-black" style={{ fontFamily: "Manrope, sans-serif", color }}>{val}</p>
-                <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: `${color}18`, color }}>{bar}%</span>
+                <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: `${color}18`, color }}></span>
               </div>
               <p className="text-sm mb-3" style={{ color: "var(--muted-foreground)" }}>{label}</p>
               <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "var(--border)" }}>
-                <div className="h-full rounded-full" style={{ width: `${bar}%`, background: color, boxShadow: `0 0 8px ${color}60` }} />
+                <div className="h-full rounded-full" style={{ width: `${100}%`, background: color, boxShadow: `0 0 8px ${color}60` }} />
               </div>
             </div>
           ))}
@@ -172,7 +166,7 @@ export default function Home() {
         <blockquote className="text-3xl leading-relaxed font-bold" style={{ fontFamily: "Manrope, sans-serif", color: "var(--foreground)" }}>
           The edit should be invisible. If a viewer is thinking about the editing, something went wrong. They should only be thinking about what you're saying.
         </blockquote>
-        <p className="mt-3 text-m font-medium" style={{ color: "var(--muted-foreground)" }}>— Editing philosophy, Cutframe Studio</p>
+        <p className="mt-3 text-m font-medium" style={{ color: "var(--muted-foreground)" }}>— Editing philosophy, FRADEX Studio</p>
       </section>
 
       {/* Client Reviews */}
@@ -210,7 +204,6 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-black text-sm" style={{ fontFamily: "Manrope, sans-serif" }}>{review.name}</p>
-                    <p className="text-xs" style={{ color: "var(--muted-foreground)" }}>{review.role}</p>
                   </div>
                 </div>
               </article>
@@ -226,7 +219,7 @@ export default function Home() {
           <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-xs font-black px-2 py-0.5 rounded" style={{ background: "rgba(202,255,0,0.15)", color: "var(--lime)" }}>QUEST</span>
+                <span className="text-xs font-black px-2 py-0.5 rounded" style={{ background: "rgba(202,255,0,0.15)", color: "var(--lime)" }}>Get Started</span>
                 <span className="text-xs" style={{ color: "var(--muted-foreground)" }}>New client onboarding</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-black leading-tight" style={{ fontFamily: "Manrope, sans-serif" }}>
