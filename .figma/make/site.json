@@ -1,7 +1,8 @@
 {
-  "description": "Showcases professional video editing services for YouTube commentary shorts with clear packages, portfolio, and easy client contact via Discord.",
+  "title": "FRADEX Studio | Shorts Editing Service",
+  "description": "FRADEX Studio edits Shorts with sharp hooks, clean captions, fast pacing, and retention-focused structure. View services, pricing, portfolio, and contact options.",
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,
