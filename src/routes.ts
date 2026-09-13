@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import PastWork from "./pages/PastWork";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import HelpCenter from "./pages/HelpCenter";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ export const router = createBrowserRouter([
       { path: "services", Component: Services },
       { path: "past-work", Component: PastWork },
       { path: "about", Component: About },
+      { path: "help-center", Component: HelpCenter },
       { path: "contact", Component: Contact },
     ],
   },

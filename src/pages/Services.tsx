@@ -292,7 +292,7 @@ export default function Services() {
       </section>
 
       {/* Workflow */}
-      <section className="border-t" style={{ borderColor: 'var(--border)' }}>
+      <section className="max-w-6xl mx-auto border-t" style={{ borderColor: 'var(--border)' }}>
         <div className="max-w-6xl mx-auto px-5 py-16">
           <div className="flex items-center gap-2 mb-3">
             <span

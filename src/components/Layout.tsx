@@ -6,8 +6,9 @@ const navLinks = [
   { to: "/", label: "Home", icon: "⌂" },
   { to: "/services", label: "Services", icon: "◈" },
   { to: "/past-work", label: "Past Work", icon: "◉" },
-  { to: "/about", label: "About", icon: "◎" },
   { to: "/contact", label: "Contact", icon: "◆" },
+  { to: "/about", label: "About", icon: "◎" },
+  { to: "/help-center", label: "Help Center", icon: "?" },
 ];
 
 function BrandLogo({ size = "header" }: { size?: "header" | "footer" }) {
